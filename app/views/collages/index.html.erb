@@ -1,0 +1,53 @@
+<h1>Index</h1>
+<%= link_to "create new collage", new_collage_path %>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #green}
+
+th {
+  background-color: #red;
+  color: black;
+}
+</style>
+</head>
+<table>
+  <tr>
+    <th>NAME</th>
+    <th>ENROLLNO</th>
+    <th>STANDARD</th>
+    <th>SUBJECT</th>
+  </tr>
+
+  <dl>
+  <dt>Chahat</dt>
+  <dd>1</dd>
+  <dt>12</dt>
+  <dd>Economics</dd>
+</dl>
+    
+
+  <tbody>
+    <% @collages.each do |collage| %>
+      <tr>
+        <td><%= collage.name %></td>
+        <td><%= collage.enrollno %></td>
+        <td><%= collage.standard %></td>
+        <td><%= collage.subject %></td>
+        <td><%= link_to "Delete", destroy_collage_path(collage.id), method: :delete %></td>
+        <td><%= link_to "edit",edit_collage_path(collage.id), method: :get %></td>
+        <td><%= link_to "show",collage_path(collage.id), method: :get %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

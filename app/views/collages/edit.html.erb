@@ -1,0 +1,11 @@
+<center>
+  <%= form_for @collage do |form| %>
+    Create new collage<br>
+    <%= form.text_field :name %><hr>
+    <%= form.text_field :enrollno %><hr>
+    <%= form.text_field :standard %><hr>
+    <%= form.text_field :subject %><hr>
+    <%= form.select :standard, ["first year", "second year", "third year"] %><hr>	
+    <%= form.submit %>
+  <% end %>
+</center>

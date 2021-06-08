@@ -2,8 +2,12 @@
 
 one:
   name: MyString
-  topic: MyString
+  enrollno: 1
+  standard: 1
+  subject: MyString
 
 two:
   name: MyString
-  topic: MyString
+  enrollno: 1
+  standard: 1
+  subject: MyString
