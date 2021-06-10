@@ -1,12 +1,31 @@
 <center>
+  <h1>COLLAGE</h1>
   <%= form_for @collage do |form| %>
     Create new collage<br>
-    <%= form.text_field :name %><hr>
-    <%= form.text_field :enrollno %><hr>
-    <%= form.text_field :standard %><hr>
-    <%= form.text_field :subject %><hr>
-    
-
+    <%= form.text_field :name %><br> 
+    <% @collage.errors.full_messages_for(:name).each do |message| %>
+      <div> <%= message %> </div>
+    <% end %> 
+    <%= form.text_field :enrollno %>
+    <br>
+    <%= form.text_field :standard %>
+    <br>
+    <%= form.text_field :subject %>
+    <br>
+    <%= form.select :standard, ["1", "2", "3"] %><br>
+    <br>
+    <%= form.check_box :enrollno %><br>
+    <%= form.label :enrollno, "I have a enrollno" %><br>
+    <%= form.radio_button :subject, "biology" %><br>
+    <%= form.label :subject_biolody, "I am learning biology" %><br>
+    <%= form.radio_button :subject, "economics" %><br>
+    <%= form.label :subject_economics, "I am learning economics" %><br>
+    <%= form.radio_button :subject, "account" %><br>
+    <%= form.label :subject_account, "I am learning account" %><br>
+    <%= form.radio_button :subject, "stat" %><br>
+    <%= form.label :subject_stat, "I am learning stat" %><br>
+    <%= form.text_area :name, size: "5x5" %><br>
+    <%= form.text_field :subject %>
     <%= form.submit %>
   <% end %>
 </center>

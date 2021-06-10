@@ -1,4 +1,4 @@
-Rails.application.routes.draw do 
+Rails.application.routes.draw do
   get 'users', to: 'users#index'
   get 'users/new', to: "users#new", as: :new_user
   post 'users', to: "users#create", as: :create_user
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'collages/new', to: 'collages#new', as: :new_collage
   post 'collages', to: "collages#create", as: :create_collage
   delete 'collages/:id', to: "collages#destroy", as: :destroy_collage
-  get 'collages/:id', to: "collages#edit", as: :edit_collage
+  get 'collages/:id/edit', to: "collages#edit", as: :edit_collage
   patch 'collages/:id', to: "collages#update", as: :update_collage
   get 'collages/:id', to: "collages#show", as: :collage
 end

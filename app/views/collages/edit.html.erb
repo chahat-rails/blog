@@ -1,11 +1,14 @@
 <center>
   <%= form_for @collage do |form| %>
     Create new collage<br>
-    <%= form.text_field :name %><hr>
-    <%= form.text_field :enrollno %><hr>
-    <%= form.text_field :standard %><hr>
-    <%= form.text_field :subject %><hr>
-    <%= form.select :standard, ["first year", "second year", "third year"] %><hr>	
+    <%= form.text_field :name %><br>
+    <br>
+    <%= form.text_field :enrollno %><br>
+    <%= form.text_field :standard %><br>
+    <%= form.text_field :subject %><br>
+    <%= form.select :standard, ["1", "2", "3"] %>
+    <%= form.check_box :enrollno %>
+    <%= form.label :enrollno, "I have a enrollno" %>
     <%= form.submit %>
   <% end %>
 </center>
